@@ -1,11 +1,61 @@
 window.LOBSTER_DATA = {
   nav: [
     { href: 'index.html', label: '首页' },
-    { href: 'intro.html', label: '认识龙虾' },
-    { href: 'get-started.html', label: '新手入门' },
-    { href: 'skills.html', label: '技能中心' },
-    { href: 'cases.html', label: '案例实战' },
-    { href: 'quiz.html', label: '路线测试' }
+    { href: 'articles.html', label: '教程' },
+    { href: 'skills.html', label: '技能' },
+    { href: 'cases.html', label: '案例' },
+    { href: 'quiz.html', label: '路线' }
+  ],
+  tabs: [
+    { href: 'index.html', label: '首页' },
+    { href: 'articles.html', label: '教程' },
+    { href: 'skills.html', label: '技能' },
+    { href: 'cases.html', label: '案例' },
+    { href: 'quiz.html', label: '路线' }
+  ],
+  categories: [
+    { key: 'beginner', name: '新手入门' },
+    { key: 'content', name: '内容赚钱' },
+    { key: 'automation', name: '自动化' },
+    { key: 'knowledge', name: '知识管理' }
+  ],
+  articles: [
+    {
+      id: 'first-task',
+      title: '如何用小龙虾从 0 到 1 跑通第一个任务',
+      href: 'article.html',
+      category: 'beginner',
+      desc: '给完全没用过 OpenClaw 的人准备的实战入门教程。',
+      readTime: '5 分钟',
+      tags: ['新手', '入门', '任务']
+    },
+    {
+      id: 'content-money',
+      title: '用龙虾写内容，为什么比只会聊天更值钱',
+      href: 'cases.html',
+      category: 'content',
+      desc: '理解从聊天型 AI 到执行型 AI 的差别。',
+      readTime: '4 分钟',
+      tags: ['内容', '变现', '案例']
+    },
+    {
+      id: 'skill-thinking',
+      title: '为什么 Skill 才是 OpenClaw 真正的威力来源',
+      href: 'skills.html',
+      category: 'automation',
+      desc: '搞懂 skills 的位置，你才真正开始会用龙虾。',
+      readTime: '3 分钟',
+      tags: ['skill', '系统', '能力']
+    },
+    {
+      id: 'which-route',
+      title: '你应该先学内容、效率，还是自动化？',
+      href: 'quiz.html',
+      category: 'beginner',
+      desc: '用最简单的路线测试，找到适合自己的切入点。',
+      readTime: '2 分钟',
+      tags: ['路线', '测试', '选择']
+    }
   ],
   featured: [
     {
@@ -14,9 +64,9 @@ window.LOBSTER_DATA = {
       desc: '给完全没用过 OpenClaw 的人准备的实战入门教程。'
     },
     {
-      title: '用龙虾写内容，为什么比只会聊天更值钱',
-      href: 'cases.html',
-      desc: '从内容生产到自动化执行，理解它真正的价值。'
+      title: '你应该先学内容、效率，还是自动化？',
+      href: 'quiz.html',
+      desc: '用最简单的路线测试，找到适合自己的切入点。'
     }
   ],
   quickCards: [
