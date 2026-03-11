@@ -1,0 +1,33 @@
+<view class="container">
+  <view class="card">
+    <view class="title">新手入门</view>
+    <view class="subtitle">如果你今天第一次接触龙虾，只做下面这 5 步就够了。</view>
+  </view>
+
+  <view class="card">
+    <view class="divider-title">第 1 步｜先理解三个词</view>
+    <view class="list-item-desc">Agent 是能帮你干活的 AI；Skill 是装给它的能力包；工作流是把任务拆成一条稳定流程。</view>
+  </view>
+
+  <view class="card">
+    <view class="divider-title">第 2 步｜装上 OpenClaw</view>
+    <view class="list-item-desc">先把主程序跑起来，确保有一个能正常工作的基础环境。别一上来装一堆东西，先保证能跑。</view>
+  </view>
+
+  <view class="card">
+    <view class="divider-title">第 3 步｜接上你最常用的场景</view>
+    <view class="list-item-desc">比如 Feishu、微信、浏览器、文档、搜索工具。不是全都要接，而是先接你最常用的那个。</view>
+  </view>
+
+  <view class="card">
+    <view class="divider-title">第 4 步｜装第一个最贴近需求的 Skill</view>
+    <view class="list-item-desc">如果你想写内容，就先装内容类；想做自动化，就先装执行类；想做信息整理，就先装知识/文档类。</view>
+  </view>
+
+  <view class="card">
+    <view class="divider-title">第 5 步｜跑第一个真实任务</view>
+    <view class="list-item-desc">比如：写一篇公众号、做一份 AI 新闻简报、给文章配图、整理一个文档。先做成一次，胜过看十篇教程。</view>
+  </view>
+
+  <view class="tip-box">入门最常见的坑：一上来想把所有能力都装全。真正更有效的方法，是先跑通一个最接近结果的场景。</view>
+</view>

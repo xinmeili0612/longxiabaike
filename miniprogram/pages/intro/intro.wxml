@@ -1,0 +1,21 @@
+<view class="container">
+  <view class="card">
+    <view class="title">什么是小龙虾？</view>
+    <view class="subtitle">一句人话版：它不是只会聊天的 AI，而是一套能接任务、装能力、跑流程、替你干活的 AI 管家系统。</view>
+  </view>
+
+  <view class="card">
+    <view class="divider-title">01｜和普通 AI 的区别</view>
+    <view class="list-item"><view class="list-item-title">普通 AI：回答问题</view><view class="list-item-desc">你问一句，它回一句，强在表达和理解。</view></view>
+    <view class="list-item"><view class="list-item-title">小龙虾：推动结果</view><view class="list-item-desc">它可以装 skills、调工具、接渠道、写文件、跑流程，目标不是“说得对”，而是“真的做完”。</view></view>
+  </view>
+
+  <view class="card">
+    <view class="divider-title">02｜为什么很多人一下就被打动</view>
+    <view class="list-item"><view class="list-item-title">因为它更像员工，不像聊天框</view><view class="list-item-desc">你不是偶尔问它一句，而是把一部分事情直接交给它做。</view></view>
+    <view class="list-item"><view class="list-item-title">因为它能不断加能力</view><view class="list-item-desc">装不同的 skills，它就能做不同类型的事。</view></view>
+    <view class="list-item"><view class="list-item-title">因为它适合做真实任务</view><view class="list-item-desc">内容、信息整理、消息发送、浏览器操作、文档处理，都是它擅长的场景。</view></view>
+  </view>
+
+  <view class="tip-box">先别急着学全部。你只需要先理解一句话：小龙虾的核心价值，是把 AI 从“助手”变成“员工”。</view>
+</view>

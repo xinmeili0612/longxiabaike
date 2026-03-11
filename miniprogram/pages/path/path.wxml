@@ -1,0 +1,19 @@
+<view class="container">
+  <view class="card">
+    <view class="title">我该从哪里开始？</view>
+    <view class="subtitle">别一上来学太多，先选一个最接近结果的方向。</view>
+  </view>
+  <view class="card">
+    <view class="divider-title">如果你想写内容赚钱</view>
+    <view class="list-item-desc">优先从公众号、老福特、图文配图这几个场景开始。因为反馈快、结果可见、最容易感受到提效。</view>
+  </view>
+  <view class="card">
+    <view class="divider-title">如果你想提升效率</view>
+    <view class="list-item-desc">优先从文档整理、笔记管理、知识库接入开始，这类场景最容易把“AI聊天”升级成“AI干活”。</view>
+  </view>
+  <view class="card">
+    <view class="divider-title">如果你想做自动化</view>
+    <view class="list-item-desc">优先从浏览器操作、定时任务、消息提醒开始，最能体现 OpenClaw 的执行系统价值。</view>
+  </view>
+  <view class="tip-box">真正有效的起步方式：选一个你本周就会真实用到的任务，让龙虾先帮你做成一次。</view>
+</view>

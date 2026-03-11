@@ -1,0 +1,12 @@
+<view class="container">
+  <view class="card card-dark">
+    <view class="title">{{article.title}}</view>
+    <view class="subtitle">{{article.summary}}</view>
+  </view>
+  <block wx:for="{{article.sections}}" wx:key="heading">
+    <view class="card">
+      <view class="divider-title">{{item.heading}}</view>
+      <view class="list-item-desc">{{item.body}}</view>
+    </view>
+  </block>
+</view>
