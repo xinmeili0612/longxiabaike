@@ -353,10 +353,10 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen font-sans text-black w-full max-w-md mx-auto shadow-2xl relative flex flex-col border-x border-[#F0F0F0] bg-white/50 backdrop-blur-sm overflow-hidden">
+    <div className="min-h-screen font-sans text-black w-full max-w-md mx-auto relative flex flex-col bg-white/50 backdrop-blur-sm md:border-x md:border-[#F0F0F0] md:shadow-2xl overflow-hidden">
       {renderHeader()}
 
-      <main className="flex-1 overflow-y-auto no-scrollbar scroll-smooth">
+      <main className="flex-1 overflow-y-auto no-scrollbar scroll-smooth pb-28 sm:pb-32">
         <AnimatePresence mode="wait">
           <motion.div
             key={`${activeTab}-${view}`}
@@ -378,7 +378,7 @@ export default function App() {
 
       {/* Navigation Bar - Always visible in list view */}
       {view === 'list' && (
-        <nav className="sticky bottom-0 w-full bg-white/95 backdrop-blur-xl border-t-2 border-[#FDE68A] px-6 sm:px-10 py-4 sm:py-5 flex justify-between items-center z-20 shadow-[0_-10px_30px_rgba(0,0,0,0.05)] safe-area-bottom">
+        <nav className="fixed bottom-0 left-0 right-0 z-30 md:left-1/2 md:-translate-x-1/2 md:max-w-md bg-white/95 backdrop-blur-xl border-t-2 border-[#FDE68A] px-5 sm:px-8 py-3 sm:py-4 flex justify-between items-center shadow-[0_-10px_30px_rgba(0,0,0,0.05)] safe-area-bottom">
           {[
             { id: 'tutorials', icon: BookText, label: '虾百科' },
             { id: 'chat', icon: MessageSquare, label: '虾聊天' },
@@ -388,16 +388,16 @@ export default function App() {
               key={item.id}
               onClick={() => { setActiveTab(item.id as Tab); setView('list'); setActiveCategory('全部'); }}
               className={cn(
-                "flex flex-col items-center gap-1.5 sm:gap-2 transition-all relative flex-1",
-                activeTab === item.id ? "text-[#E07A00]" : "text-[#D1D5DB] hover:text-[#9CA3AF]"
+                "flex flex-col items-center justify-center gap-1.5 sm:gap-2 transition-all relative flex-1 min-h-[52px]",
+                activeTab === item.id ? "text-[#E07A00]" : "text-[#C7CDD6] hover:text-[#9CA3AF]"
               )}
             >
-              <item.icon className={cn("w-6 h-6 sm:w-7 h-7 transition-transform", activeTab === item.id && "scale-110 sm:scale-125")} />
-              <span className="text-[10px] sm:text-[11px] font-black tracking-widest">{item.label}</span>
+              <item.icon className={cn("w-5 h-5 sm:w-6 sm:h-6 transition-transform", activeTab === item.id && "scale-110")} />
+              <span className="text-[10px] sm:text-[11px] font-black tracking-[0.18em] leading-none">{item.label}</span>
               {activeTab === item.id && (
                 <motion.div 
                   layoutId="nav-dot"
-                  className="absolute -bottom-1 sm:-bottom-2 w-1.5 h-1.5 bg-[#E07A00] rounded-full shadow-[0_0_10px_rgba(224,122,0,0.5)]"
+                  className="absolute -bottom-0.5 w-1.5 h-1.5 bg-[#E07A00] rounded-full shadow-[0_0_10px_rgba(224,122,0,0.5)]"
                 />
               )}
             </button>
