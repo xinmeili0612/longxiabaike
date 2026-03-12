@@ -37,9 +37,15 @@ export default function App() {
   const [input, setInput] = useState('');
   const [isLoading, setIsLoading] = useState(false);
   const chatEndRef = useRef<HTMLDivElement>(null);
+  const chatScrollRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    chatEndRef.current?.scrollIntoView({ behavior: 'smooth' });
+    if (chatScrollRef.current) {
+      chatScrollRef.current.scrollTo({
+        top: chatScrollRef.current.scrollHeight,
+        behavior: 'smooth',
+      });
+    }
   }, [messages]);
 
   const handleSendMessage = async (text?: string) => {
@@ -172,7 +178,7 @@ export default function App() {
 
   const renderChat = () => (
     <div className="flex flex-col min-h-0 h-full pb-8">
-      <div className="h-[calc(100vh-360px)] min-h-[260px] max-h-[520px] overflow-y-auto p-6 space-y-6 no-scrollbar">
+      <div ref={chatScrollRef} className="h-[calc(100vh-360px)] min-h-[260px] max-h-[520px] overflow-y-auto p-6 space-y-6 no-scrollbar">
         {messages.length === 0 && (
           <div className="space-y-8 py-4">
             <div className="bg-[#FFFBEB] border-2 border-[#FEF3C7] rounded-[32px] p-8 shadow-sm relative overflow-hidden">
