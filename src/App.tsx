@@ -172,7 +172,7 @@ export default function App() {
 
   const renderChat = () => (
     <div className="flex flex-col min-h-0 h-full pb-8">
-      <div className="flex-1 overflow-y-auto p-6 space-y-6 no-scrollbar">
+      <div className="h-[calc(100vh-360px)] min-h-[260px] max-h-[520px] overflow-y-auto p-6 space-y-6 no-scrollbar">
         {messages.length === 0 && (
           <div className="space-y-8 py-4">
             <div className="bg-[#FFFBEB] border-2 border-[#FEF3C7] rounded-[32px] p-8 shadow-sm relative overflow-hidden">
