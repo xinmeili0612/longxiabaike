@@ -38,6 +38,7 @@ export default function App() {
   const [isLoading, setIsLoading] = useState(false);
   const chatEndRef = useRef<HTMLDivElement>(null);
   const chatScrollRef = useRef<HTMLDivElement>(null);
+  const chatInputRef = useRef<HTMLInputElement>(null);
 
   useEffect(() => {
     if (chatScrollRef.current) {
@@ -54,6 +55,7 @@ export default function App() {
 
     const userMessage = messageToSend.trim();
     setInput('');
+    chatInputRef.current?.blur();
     setMessages(prev => [...prev, { role: 'user', text: userMessage }]);
     setIsLoading(true);
 
@@ -249,6 +251,7 @@ export default function App() {
       <div className="p-4 bg-white/80 backdrop-blur-md border-t border-[#FDE68A] sticky bottom-0">
         <div className="flex items-center gap-3 bg-[#FFFBEB] border-2 border-[#FEF3C7] rounded-[20px] px-5 py-2 focus-within:border-[#F59E0B] transition-all shadow-inner">
           <input 
+            ref={chatInputRef}
             type="text"
             placeholder="输入你的问题..."
             className="flex-1 bg-transparent border-none focus:ring-0 text-[15px] py-2 font-bold text-black placeholder-[#B45309]/40"
