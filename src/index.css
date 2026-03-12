@@ -1,0 +1,61 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+}
+
+body {
+  background-color: #FDFDFD;
+  background-image: 
+    linear-gradient(#F0F0F0 1px, transparent 1px),
+    linear-gradient(90deg, #F0F0F0 1px, transparent 1px);
+  background-size: 40px 40px;
+  color: #1A1A1A;
+}
+
+/* Markdown Styling - QClaw Theme */
+.markdown-body h1 {
+  @apply text-3xl font-black mb-6 mt-8 text-black tracking-tight text-center;
+}
+.markdown-body h2 {
+  @apply text-2xl font-black mb-4 mt-6 text-black tracking-tight;
+}
+.markdown-body h3 {
+  @apply text-xl font-bold mb-3 mt-5 text-[#E07A00] tracking-tight;
+}
+.markdown-body p {
+  @apply text-[16px] leading-relaxed mb-5 text-[#4A4A4A];
+}
+.markdown-body ul {
+  @apply list-disc list-inside mb-5 space-y-2 text-[16px] text-[#4A4A4A];
+}
+.markdown-body ol {
+  @apply list-decimal list-inside mb-5 space-y-2 text-[16px] text-[#4A4A4A];
+}
+.markdown-body code {
+  @apply bg-[#FFFBEB] px-1.5 py-0.5 rounded-md text-[#E07A00] font-mono text-[14px] border border-[#FEF3C7];
+}
+.markdown-body pre {
+  @apply bg-[#1A1A1A] p-5 rounded-2xl overflow-x-auto mb-6 shadow-xl;
+}
+.markdown-body pre code {
+  @apply bg-transparent p-0 text-[#F3F4F6] border-none;
+}
+.markdown-body a {
+  @apply text-[#E07A00] font-bold underline decoration-2 underline-offset-4 hover:text-[#B45309];
+}
+.markdown-body strong {
+  @apply font-black text-black;
+}
+.markdown-body blockquote {
+  @apply border-l-4 border-[#F59E0B] pl-5 italic text-[#6B7280] my-6 bg-[#FFFBEB]/50 py-2 rounded-r-lg;
+}
+
+/* Custom scrollbar */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}

@@ -1,0 +1,5 @@
+{
+  "name": "龙虾百科",
+  "description": "面向 OpenClaw 小白用户的轻量级百科，包含虾教程、虾聊天和虾日记。",
+  "requestFramePermissions": []
+}
