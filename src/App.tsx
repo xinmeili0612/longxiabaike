@@ -90,12 +90,12 @@ export default function App() {
     };
 
     return (
-      <header className="sticky top-0 z-10 bg-white/90 backdrop-blur-md border-b border-[#FDE68A] px-6 py-5 text-center transition-all">
-        <h1 className="text-[28px] sm:text-[32px] font-black text-black tracking-tighter leading-tight">
+      <header className="sticky top-0 z-10 bg-white/90 backdrop-blur-md border-b border-[#FDE68A] px-5 py-4 text-center transition-all">
+        <h1 className="text-[24px] sm:text-[28px] font-black text-black tracking-tighter leading-tight">
           {titles[activeTab].slice(0, 2)}
           <span className="text-[#E07A00]">{titles[activeTab].slice(2)}</span>
         </h1>
-        <p className="text-[11px] sm:text-[13px] text-[#6B7280] mt-1 font-bold uppercase tracking-[0.2em] opacity-80">
+        <p className="text-[10px] sm:text-[12px] text-[#6B7280] mt-1 font-bold uppercase tracking-[0.16em] opacity-80">
           {activeTab === 'tutorials' && '不用命令行 也能玩转小龙虾'}
           {activeTab === 'chat' && '你的本地龙虾管家'}
           {activeTab === 'diary' && '小白也能轻松玩转'}
@@ -111,7 +111,7 @@ export default function App() {
     );
 
     return (
-      <div className="p-5 sm:p-6 space-y-5 sm:space-y-6 pb-32">
+      <div className="p-4 sm:p-5 space-y-4 sm:space-y-5 pb-6">
         {/* Search */}
         <div className="relative group">
           <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-[#E07A00] group-focus-within:scale-110 transition-transform" />
@@ -150,7 +150,7 @@ export default function App() {
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               onClick={() => { setSelectedTutorial(t); setSelectedDiary(null); setView('detail'); }}
-              className="p-6 bg-[#FFFDF5] border-2 border-[#FEF3C7] rounded-[24px] hover:border-[#F59E0B] transition-all cursor-pointer group shadow-sm relative overflow-hidden"
+              className="p-5 bg-[#FFFDF5] border-2 border-[#FEF3C7] rounded-[22px] hover:border-[#F59E0B] transition-all cursor-pointer group shadow-sm relative overflow-hidden"
             >
               <div className="absolute top-0 right-0 w-24 h-24 bg-[#F59E0B]/5 rounded-full -mr-12 -mt-12 transition-transform group-hover:scale-150" />
               <div className="relative z-10">
@@ -160,8 +160,8 @@ export default function App() {
                   </span>
                   <ChevronRight className="w-5 h-5 text-[#FDE68A] group-hover:text-[#E07A00] transition-colors" />
                 </div>
-                <h3 className="text-[18px] font-black text-black leading-tight">{t.title}</h3>
-                <p className="text-[14px] text-[#6B7280] mt-2 line-clamp-1 font-medium">{t.description}</p>
+                <h3 className="text-[17px] font-black text-black leading-tight">{t.title}</h3>
+                <p className="text-[13px] text-[#6B7280] mt-1.5 line-clamp-1 font-medium">{t.description}</p>
               </div>
             </motion.div>
           ))}
