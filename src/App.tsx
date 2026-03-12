@@ -69,7 +69,7 @@ export default function App() {
   const renderHeader = () => {
     if (view === 'detail') {
       return (
-        <header className="sticky top-0 z-10 bg-white/80 backdrop-blur-md border-b border-[#FDE68A] px-4 pt-[calc(env(safe-area-inset-top,0px)+12px)] pb-4 flex items-center">
+        <header className="sticky top-0 z-10 bg-white/80 backdrop-blur-md border-b border-[#FDE68A] px-4 py-4 flex items-center">
           <button 
             onClick={() => setView('list')}
             className="p-2 hover:bg-[#FFFBEB] rounded-full transition-colors"
@@ -90,7 +90,7 @@ export default function App() {
     };
 
     return (
-      <header className="sticky top-0 z-10 bg-white/90 backdrop-blur-md border-b border-[#FDE68A] px-5 pt-[calc(env(safe-area-inset-top,0px)+10px)] pb-4 text-center transition-all">
+      <header className="sticky top-0 z-10 bg-white/90 backdrop-blur-md border-b border-[#FDE68A] px-5 py-4 text-center transition-all">
         <h1 className="text-[24px] sm:text-[28px] font-black text-black tracking-tighter leading-tight">
           {titles[activeTab].slice(0, 2)}
           <span className="text-[#E07A00]">{titles[activeTab].slice(2)}</span>
@@ -353,7 +353,7 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-[100svh] font-sans text-black w-full max-w-md mx-auto relative flex flex-col bg-white/50 backdrop-blur-sm md:border-x md:border-[#F0F0F0] md:shadow-2xl overflow-hidden">
+    <div className="h-[100dvh] font-sans text-black w-full max-w-md mx-auto relative flex flex-col bg-white/50 backdrop-blur-sm md:border-x md:border-[#F0F0F0] md:shadow-2xl overflow-hidden">
       {renderHeader()}
 
       <main className="flex-1 min-h-0 overflow-y-auto no-scrollbar scroll-smooth">
