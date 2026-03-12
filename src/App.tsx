@@ -356,7 +356,7 @@ export default function App() {
     <div className="min-h-screen font-sans text-black w-full max-w-md mx-auto relative flex flex-col bg-white/50 backdrop-blur-sm md:border-x md:border-[#F0F0F0] md:shadow-2xl overflow-hidden">
       {renderHeader()}
 
-      <main className="flex-1 overflow-y-auto no-scrollbar scroll-smooth pb-28 sm:pb-32">
+      <main className="flex-1 overflow-y-auto no-scrollbar scroll-smooth pb-36 sm:pb-40">
         <AnimatePresence mode="wait">
           <motion.div
             key={`${activeTab}-${view}`}
@@ -378,7 +378,10 @@ export default function App() {
 
       {/* Navigation Bar - Always visible in list view */}
       {view === 'list' && (
-        <nav className="fixed bottom-0 left-0 right-0 z-30 md:left-1/2 md:-translate-x-1/2 md:max-w-md bg-white/95 backdrop-blur-xl border-t-2 border-[#FDE68A] px-5 sm:px-8 py-3 sm:py-4 flex justify-between items-center shadow-[0_-10px_30px_rgba(0,0,0,0.05)] safe-area-bottom">
+        <nav
+          className="fixed left-3 right-3 z-30 md:left-1/2 md:-translate-x-1/2 md:max-w-md bg-white/95 backdrop-blur-xl border border-[#FDE68A] rounded-[24px] px-4 sm:px-6 py-2.5 sm:py-3 flex justify-between items-center shadow-[0_12px_32px_rgba(0,0,0,0.10)]"
+          style={{ bottom: 'calc(env(safe-area-inset-bottom, 0px) + 12px)' }}
+        >
           {[
             { id: 'tutorials', icon: BookText, label: '虾百科' },
             { id: 'chat', icon: MessageSquare, label: '虾聊天' },
