@@ -379,7 +379,7 @@ export default function App() {
       {/* Navigation Bar - Always visible in list view */}
       {view === 'list' && (
         <nav className="shrink-0 mx-4 mb-4 mt-2 bg-white/96 backdrop-blur-xl border border-[#E5E7EB] rounded-[22px] px-2 py-2 shadow-[0_10px_30px_rgba(0,0,0,0.08)]">
-          <div className="flex items-center justify-between gap-2">
+          <div className="grid grid-cols-3 items-center gap-2">
           {[
             { id: 'tutorials', icon: BookText, label: '虾百科' },
             { id: 'chat', icon: MessageSquare, label: '虾聊天' },
@@ -389,7 +389,7 @@ export default function App() {
               key={item.id}
               onClick={() => { setActiveTab(item.id as Tab); setView('list'); setActiveCategory('全部'); }}
               className={cn(
-                "flex flex-col items-center justify-center gap-1 transition-all relative flex-1 min-h-[54px] rounded-[16px] px-2",
+                "flex flex-col items-center justify-center gap-1 transition-all relative w-full min-h-[58px] rounded-[16px] px-2",
                 activeTab === item.id ? "text-[#E07A00] bg-[#FFF7ED]" : "text-[#6B7280]"
               )}
             >
