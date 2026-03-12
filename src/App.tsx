@@ -171,8 +171,8 @@ export default function App() {
   };
 
   const renderChat = () => (
-    <div className="flex flex-col min-h-0 h-full">
-      <div className="flex-1 min-h-0 overflow-y-auto p-6 space-y-6 no-scrollbar">
+    <div className="flex flex-col min-h-0 h-full pb-8">
+      <div className="flex-1 overflow-y-auto p-6 space-y-6 no-scrollbar">
         {messages.length === 0 && (
           <div className="space-y-8 py-4">
             <div className="bg-[#FFFBEB] border-2 border-[#FEF3C7] rounded-[32px] p-8 shadow-sm relative overflow-hidden">
@@ -240,7 +240,7 @@ export default function App() {
         <div ref={chatEndRef} />
       </div>
 
-      <div className="shrink-0 p-4 bg-white/80 backdrop-blur-md border-t border-[#FDE68A]">
+      <div className="p-4 bg-white/80 backdrop-blur-md border-t border-[#FDE68A] sticky bottom-0">
         <div className="flex items-center gap-3 bg-[#FFFBEB] border-2 border-[#FEF3C7] rounded-[20px] px-5 py-2 focus-within:border-[#F59E0B] transition-all shadow-inner">
           <input 
             type="text"
