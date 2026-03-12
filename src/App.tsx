@@ -179,11 +179,11 @@ export default function App() {
   };
 
   const renderChat = () => (
-    <div className="flex flex-col min-h-0 h-full pb-8">
-      <div ref={chatScrollRef} className="h-[calc(100vh-360px)] min-h-[260px] max-h-[520px] overflow-y-auto p-6 space-y-6 no-scrollbar">
+    <div className="flex flex-col min-h-0 h-full">
+      <div ref={chatScrollRef} className="flex-1 min-h-0 overflow-y-auto px-6 pt-4 pb-3 space-y-5 no-scrollbar">
         {messages.length === 0 && (
-          <div className="space-y-8 py-4">
-            <div className="bg-[#FFFBEB] border-2 border-[#FEF3C7] rounded-[32px] p-8 shadow-sm relative overflow-hidden">
+          <div className="space-y-5 py-1">
+            <div className="bg-[#FFFBEB] border-2 border-[#FEF3C7] rounded-[28px] p-6 shadow-sm relative overflow-hidden">
               <div className="absolute top-0 right-0 p-4 opacity-10">
                 <MessageSquare className="w-24 h-24 text-[#E07A00]" />
               </div>
@@ -200,7 +200,7 @@ export default function App() {
               </div>
             </div>
 
-            <div className="grid grid-cols-1 gap-3">
+            <div className="grid grid-cols-1 gap-2">
               {[
                 '龙虾是什么？',
                 '小白先学什么？',
@@ -248,7 +248,7 @@ export default function App() {
         <div ref={chatEndRef} />
       </div>
 
-      <div className="p-4 bg-white/80 backdrop-blur-md border-t border-[#FDE68A] sticky bottom-0">
+      <div className="shrink-0 p-3 bg-white/80 backdrop-blur-md border-t border-[#FDE68A] sticky bottom-0">
         <div className="flex items-center gap-3 bg-[#FFFBEB] border-2 border-[#FEF3C7] rounded-[20px] px-5 py-2 focus-within:border-[#F59E0B] transition-all shadow-inner">
           <input 
             ref={chatInputRef}
