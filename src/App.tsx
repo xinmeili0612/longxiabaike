@@ -356,7 +356,7 @@ export default function App() {
     <div className="min-h-screen font-sans text-black w-full max-w-md mx-auto relative flex flex-col bg-white/50 backdrop-blur-sm md:border-x md:border-[#F0F0F0] md:shadow-2xl overflow-hidden">
       {renderHeader()}
 
-      <main className="flex-1 overflow-y-auto no-scrollbar scroll-smooth pb-24 sm:pb-28">
+      <main className="flex-1 overflow-y-auto no-scrollbar scroll-smooth pb-32 sm:pb-36">
         <AnimatePresence mode="wait">
           <motion.div
             key={`${activeTab}-${view}`}
@@ -379,7 +379,7 @@ export default function App() {
       {/* Navigation Bar - Always visible in list view */}
       {view === 'list' && (
         <nav
-          className="fixed left-0 right-0 bottom-0 z-30 md:left-1/2 md:-translate-x-1/2 md:max-w-md bg-white/96 backdrop-blur-xl border-t border-[#E5E7EB] px-3 sm:px-4 py-2 flex justify-between items-center shadow-[0_-6px_18px_rgba(0,0,0,0.06)]"
+          className="fixed bottom-3 left-1/2 -translate-x-1/2 z-40 w-[calc(100%-24px)] max-w-md bg-white/98 backdrop-blur-xl border border-[#E5E7EB] rounded-[22px] px-2 py-2 shadow-[0_10px_30px_rgba(0,0,0,0.10)]"
           style={{ paddingBottom: 'calc(env(safe-area-inset-bottom, 0px) + 8px)' }}
         >
           {[
@@ -391,12 +391,12 @@ export default function App() {
               key={item.id}
               onClick={() => { setActiveTab(item.id as Tab); setView('list'); setActiveCategory('全部'); }}
               className={cn(
-                "flex flex-col items-center justify-center gap-1 transition-all relative flex-1 min-h-[48px] rounded-xl",
-                activeTab === item.id ? "text-[#E07A00]" : "text-[#6B7280]"
+                "flex flex-col items-center justify-center gap-1 transition-all relative flex-1 min-h-[54px] rounded-[16px] px-2",
+                activeTab === item.id ? "text-[#E07A00] bg-[#FFF7ED]" : "text-[#6B7280]"
               )}
             >
               <item.icon className={cn("w-5 h-5 transition-transform", activeTab === item.id && "scale-110")} />
-              <span className="text-[11px] font-black leading-none">{item.label}</span>
+              <span className="text-[11px] font-black leading-none whitespace-nowrap">{item.label}</span>
               {activeTab === item.id && (
                 <motion.div 
                   layoutId="nav-dot"
