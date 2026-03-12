@@ -1,8 +1,0 @@
-@import '../../app.wxss';
-.chat-box { display:flex; flex-direction:column; gap:16rpx; margin-top: 24rpx; }
-.msg { max-width: 86%; padding: 24rpx; border-radius: 28rpx; font-size: 28rpx; line-height: 1.7; }
-.msg-ai { background: #ffffff; color: #243447; align-self: flex-start; box-shadow: 0 12rpx 32rpx rgba(31, 68, 117, 0.08); }
-.msg-user { background: linear-gradient(135deg, #3b82f6, #60a5fa); color: #fff; align-self: flex-end; }
-.input-bar { display:flex; gap: 16rpx; margin-top: 24rpx; align-items:center; }
-.chat-input { flex:1; background:#fff; border-radius: 999rpx; padding: 24rpx 30rpx; font-size: 28rpx; }
-.send-btn { background:#111827; color:#fff; border-radius:999rpx; padding: 22rpx 30rpx; font-size:28rpx; }
