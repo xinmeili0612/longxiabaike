@@ -8,9 +8,9 @@ window.LOBSTER_DATA = {
     { href: 'faq.html', label: 'FAQ' }
   ],
   tabs: [
-    { href: 'index.html', label: '首页' },
-    { href: 'articles.html', label: '教程' },
-    { href: 'cases.html', label: '实战' }
+    { href: 'index.html', label: '虾首页', kind: 'normal' },
+    { href: 'advisor.html', label: '虾顾问', kind: 'primary' },
+    { href: 'cases.html', label: '虾实战', kind: 'normal' }
   ],
   categories: [
     { key: 'beginner', name: '新手入门' },

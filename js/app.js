@@ -13,8 +13,11 @@
   const tabRoot = document.querySelector('[data-tabs]');
   if (tabRoot) {
     tabRoot.innerHTML = data.tabs.map(item => {
-      const active = item.href === path ? 'tab active' : 'tab';
-      return `<a class="${active}" href="${item.href}">${item.label}</a>`;
+      const isActive = item.href === path;
+      const cls = item.kind === 'primary'
+        ? `tab tab-primary${isActive ? ' active' : ''}`
+        : `tab${isActive ? ' active' : ''}`;
+      return `<a class="${cls}" href="${item.href}"><span>${item.label}</span></a>`;
     }).join('');
   }
 
