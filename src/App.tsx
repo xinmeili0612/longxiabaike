@@ -174,39 +174,44 @@ export default function App() {
     <div className="flex flex-col h-[calc(100vh-160px)] pb-8">
       <div className="flex-1 overflow-y-auto p-6 space-y-6 no-scrollbar">
         {messages.length === 0 && (
-          <div className="space-y-6 py-2">
-            <div className="text-center px-2 pt-2 pb-1">
-              <div className="text-[28px] font-black tracking-tight text-black">虾聊天</div>
-              <p className="mt-2 text-[14px] leading-relaxed text-[#6B7280] font-medium">
-                不会就问，我尽量用最简单的话回答。
-              </p>
+          <div className="space-y-8 py-4">
+            <div className="bg-[#FFFBEB] border-2 border-[#FEF3C7] rounded-[32px] p-8 shadow-sm relative overflow-hidden">
+              <div className="absolute top-0 right-0 p-4 opacity-10">
+                <MessageSquare className="w-24 h-24 text-[#E07A00]" />
+              </div>
+              <div className="relative z-10">
+                <div className="flex items-center gap-4 mb-4">
+                  <div className="bg-[#E07A00] p-3 rounded-2xl shadow-lg">
+                    <Sparkles className="text-white w-6 h-6" />
+                  </div>
+                  <h3 className="text-[22px] font-black text-black">雷猴啊！朋友们</h3>
+                </div>
+                <p className="text-[16px] text-[#4B5563] leading-relaxed font-medium">
+                  我是你的龙虾管家 <span className="text-[#E07A00] font-black">虾助手</span>。有什么不懂的尽管问，小白也能轻松玩转！
+                </p>
+              </div>
             </div>
 
-            <div className="bg-white border border-[#E5E7EB] rounded-[28px] px-5 py-5 shadow-sm">
-              <div className="flex items-center gap-3 text-[#9CA3AF]">
-                <Search className="w-5 h-5" />
-                <span className="text-[15px] font-medium">你想问什么？</span>
-              </div>
-              <div className="mt-4 flex flex-wrap gap-2">
-                {[
-                  '龙虾是什么？',
-                  '小白先学什么？',
-                  '龙虾能做什么？',
-                  '为什么会报错？'
-                ].map(q => (
-                  <button
-                    key={q}
-                    onClick={() => handleSendMessage(q)}
-                    className="px-4 py-2 rounded-full bg-[#F9FAFB] text-[#374151] text-[13px] font-semibold border border-[#E5E7EB] hover:bg-[#FFF7ED] hover:border-[#F59E0B] transition-all"
-                  >
-                    {q}
-                  </button>
-                ))}
-              </div>
+            <div className="grid grid-cols-1 gap-3">
+              {[
+                '龙虾是什么？',
+                '小白先学什么？',
+                '龙虾能做什么？',
+                '我这个问题怎么解决？'
+              ].map(q => (
+                <button
+                  key={q}
+                  onClick={() => handleSendMessage(q)}
+                  className="text-left p-5 bg-white border-2 border-[#F3F4F6] rounded-2xl text-[15px] font-black text-black hover:border-[#F59E0B] hover:bg-[#FFFBEB] transition-all flex justify-between items-center group shadow-sm"
+                >
+                  {q}
+                  <ChevronRight className="w-5 h-5 text-[#FDE68A] group-hover:text-[#E07A00]" />
+                </button>
+              ))}
             </div>
           </div>
         )}
-
+        
         {messages.map((m, i) => (
           <div key={i} className={cn(
             "flex flex-col max-w-[90%]",
