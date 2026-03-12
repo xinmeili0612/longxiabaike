@@ -10,9 +10,7 @@ window.LOBSTER_DATA = {
   tabs: [
     { href: 'index.html', label: '首页' },
     { href: 'articles.html', label: '教程' },
-    { href: 'skills.html', label: '技能' },
-    { href: 'cases.html', label: '案例' },
-    { href: 'quiz.html', label: '路线' }
+    { href: 'cases.html', label: '实战' }
   ],
   categories: [
     { key: 'beginner', name: '新手入门' },
