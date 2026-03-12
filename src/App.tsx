@@ -379,8 +379,8 @@ export default function App() {
       {/* Navigation Bar - Always visible in list view */}
       {view === 'list' && (
         <nav
-          className="fixed left-3 right-3 z-30 md:left-1/2 md:-translate-x-1/2 md:max-w-md bg-white/95 backdrop-blur-xl border border-[#FDE68A] rounded-[24px] px-4 sm:px-6 py-2.5 sm:py-3 flex justify-between items-center shadow-[0_12px_32px_rgba(0,0,0,0.10)]"
-          style={{ bottom: 'calc(env(safe-area-inset-bottom, 0px) + 12px)' }}
+          className="fixed left-0 right-0 bottom-0 z-40 md:left-1/2 md:-translate-x-1/2 md:max-w-md bg-white border-t-2 border-[#F59E0B] px-3 sm:px-4 py-2 flex justify-between items-center shadow-[0_-8px_24px_rgba(0,0,0,0.10)]"
+          style={{ paddingBottom: 'calc(env(safe-area-inset-bottom, 0px) + 8px)' }}
         >
           {[
             { id: 'tutorials', icon: BookText, label: '虾百科' },
@@ -391,12 +391,12 @@ export default function App() {
               key={item.id}
               onClick={() => { setActiveTab(item.id as Tab); setView('list'); setActiveCategory('全部'); }}
               className={cn(
-                "flex flex-col items-center justify-center gap-1.5 sm:gap-2 transition-all relative flex-1 min-h-[52px]",
-                activeTab === item.id ? "text-[#E07A00]" : "text-[#C7CDD6] hover:text-[#9CA3AF]"
+                "flex flex-col items-center justify-center gap-1 transition-all relative flex-1 min-h-[50px] rounded-xl",
+                activeTab === item.id ? "text-[#E07A00] bg-[#FFF7ED]" : "text-[#6B7280]"
               )}
             >
-              <item.icon className={cn("w-5 h-5 sm:w-6 sm:h-6 transition-transform", activeTab === item.id && "scale-110")} />
-              <span className="text-[10px] sm:text-[11px] font-black tracking-[0.18em] leading-none">{item.label}</span>
+              <item.icon className={cn("w-5 h-5 sm:w-5 sm:h-5 transition-transform", activeTab === item.id && "scale-110")} />
+              <span className="text-[11px] font-black leading-none">{item.label}</span>
               {activeTab === item.id && (
                 <motion.div 
                   layoutId="nav-dot"
