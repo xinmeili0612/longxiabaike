@@ -1,0 +1,27 @@
+<view class="page soft-bg" wx:if="{{journal}}">
+  <view class="detail-card">
+    <view class="content-tag">{{journal.tag}}</view>
+    <view class="detail-title">{{journal.title}}</view>
+    <view class="detail-intro">{{journal.intro}}</view>
+
+    <view class="detail-subtitle">背景介绍</view>
+    <view class="detail-body">{{journal.background}}</view>
+
+    <view class="detail-subtitle">过程记录</view>
+    <view class="detail-body">{{journal.process}}</view>
+
+    <view class="detail-subtitle">结果总结</view>
+    <view class="detail-body">{{journal.result}}</view>
+
+    <view class="detail-subtitle">经验 / 提醒</view>
+    <view class="detail-body">{{journal.tip}}</view>
+  </view>
+
+  <view class="detail-card">
+    <view class="section-title">相关教程</view>
+    <block wx:for="{{journal.related}}" wx:key="*this">
+      <view class="related-item">{{item}}</view>
+    </block>
+    <view class="primary-btn" bindtap="goChat">不懂就去问 AI</view>
+  </view>
+</view>

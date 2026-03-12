@@ -1,20 +1,37 @@
 {
   "pages": [
-    "pages/index/index",
-    "pages/intro/intro",
-    "pages/get-started/get-started",
-    "pages/skills/skills",
-    "pages/cases/cases",
-    "pages/path/path",
-    "pages/quiz/quiz",
-    "pages/article/article"
+    "pages/tutorials/tutorials",
+    "pages/article/article",
+    "pages/chat/chat",
+    "pages/journal/journal",
+    "pages/journal-detail/journal-detail"
   ],
   "window": {
     "navigationBarTitleText": "龙虾百科",
-    "navigationBarBackgroundColor": "#ffffff",
+    "navigationBarBackgroundColor": "#f8fbff",
     "navigationBarTextStyle": "black",
-    "backgroundColor": "#f6f7fb",
+    "backgroundColor": "#f4f7fb",
     "backgroundTextStyle": "light"
+  },
+  "tabBar": {
+    "color": "#6b7280",
+    "selectedColor": "#2563eb",
+    "backgroundColor": "#ffffff",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/tutorials/tutorials",
+        "text": "虾教程"
+      },
+      {
+        "pagePath": "pages/chat/chat",
+        "text": "虾聊天"
+      },
+      {
+        "pagePath": "pages/journal/journal",
+        "text": "虾日记"
+      }
+    ]
   },
   "style": "v2",
   "sitemapLocation": "sitemap.json"

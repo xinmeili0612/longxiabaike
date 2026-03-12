@@ -1,22 +1,13 @@
+const { tutorials } = require('../../data/content');
 Page({
   data: {
-    article: {
-      title: '如何用小龙虾从 0 到 1 跑通第一个任务',
-      summary: '给完全没用过 OpenClaw 的人准备的实战入门教程。',
-      sections: [
-        {
-          heading: '先别学太多，先跑通一次',
-          body: '很多人一上来就想把所有能力全学会，最后什么都没跑起来。更有效的方法，是先选一个本周就能真实用到的任务。'
-        },
-        {
-          heading: '从最接近结果的场景开始',
-          body: '如果你想赚钱，就先做内容；如果你想提效，就先做文档和整理；如果你想感受自动化，就先做浏览器和定时任务。'
-        },
-        {
-          heading: '跑通一次，比看十篇教程更重要',
-          body: '真正让人上手的不是概念，而是第一次看到结果。完成一次以后，你自然会知道下一步该扩什么。'
-        }
-      ]
-    }
+    article: null
+  },
+  onLoad(query) {
+    const article = tutorials.find(item => item.id === query.id) || tutorials[0];
+    this.setData({ article });
+  },
+  goChat() {
+    wx.switchTab({ url: '/pages/chat/chat' });
   }
-})
+});
