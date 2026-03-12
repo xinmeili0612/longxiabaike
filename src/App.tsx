@@ -171,7 +171,7 @@ export default function App() {
   };
 
   const renderChat = () => (
-    <div className="flex flex-col h-[calc(100vh-160px)] pb-8">
+    <div className="flex flex-col min-h-0 h-full pb-8">
       <div className="flex-1 overflow-y-auto p-6 space-y-6 no-scrollbar">
         {messages.length === 0 && (
           <div className="space-y-8 py-4">
