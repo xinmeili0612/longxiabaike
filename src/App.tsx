@@ -356,7 +356,7 @@ export default function App() {
     <div className="min-h-screen font-sans text-black w-full max-w-md mx-auto relative flex flex-col bg-white/50 backdrop-blur-sm md:border-x md:border-[#F0F0F0] md:shadow-2xl overflow-hidden">
       {renderHeader()}
 
-      <main className="flex-1 overflow-y-auto no-scrollbar scroll-smooth pb-32 sm:pb-36">
+      <main className="flex-1 overflow-y-auto no-scrollbar scroll-smooth">
         <AnimatePresence mode="wait">
           <motion.div
             key={`${activeTab}-${view}`}
@@ -378,10 +378,8 @@ export default function App() {
 
       {/* Navigation Bar - Always visible in list view */}
       {view === 'list' && (
-        <nav
-          className="fixed bottom-3 left-1/2 -translate-x-1/2 z-40 w-[calc(100%-24px)] max-w-md bg-white/98 backdrop-blur-xl border border-[#E5E7EB] rounded-[22px] px-2 py-2 shadow-[0_10px_30px_rgba(0,0,0,0.10)]"
-          style={{ paddingBottom: 'calc(env(safe-area-inset-bottom, 0px) + 8px)' }}
-        >
+        <nav className="mx-6 mb-6 mt-2 bg-white/96 backdrop-blur-xl border border-[#E5E7EB] rounded-[22px] px-2 py-2 shadow-[0_10px_30px_rgba(0,0,0,0.08)]">
+          <div className="flex items-center justify-between gap-2">
           {[
             { id: 'tutorials', icon: BookText, label: '虾百科' },
             { id: 'chat', icon: MessageSquare, label: '虾聊天' },
@@ -405,6 +403,7 @@ export default function App() {
               )}
             </button>
           ))}
+          </div>
         </nav>
       )}
     </div>
