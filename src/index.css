@@ -31,7 +31,7 @@ body {
 }
 
 .markdown-body h1 {
-  @apply text-[28px] leading-[1.22] font-black mb-8 mt-2 text-black tracking-[-0.03em] text-center;
+  @apply text-[24px] leading-[1.28] font-black mb-7 mt-2 text-black tracking-[-0.025em] text-center;
 }
 
 .markdown-body h2 {
