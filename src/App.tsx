@@ -336,15 +336,15 @@ export default function App() {
   const renderDetail = () => {
     const item = selectedTutorial || selectedDiary;
     return (
-      <div className="p-6 pb-32">
-        <div className="bg-[#FFFDF5] border-2 border-[#FEF3C7] rounded-[32px] p-8 shadow-sm">
-          <div className="markdown-body prose prose-slate max-w-none">
+      <div className="px-4 pt-5 pb-28">
+        <article className="bg-[#FFFDF5] border-2 border-[#FEF3C7] rounded-[30px] px-6 py-7 shadow-[0_10px_30px_rgba(0,0,0,0.04)]">
+          <div className="markdown-body max-w-none">
             <ReactMarkdown>{item?.content || ''}</ReactMarkdown>
           </div>
-        </div>
+        </article>
 
         {/* Action Buttons */}
-        <div className="mt-12 space-y-6 text-center">
+        <div className="mt-10 space-y-6 text-center">
           <div className="flex justify-center">
             <div className="h-1 w-12 bg-[#FDE68A] rounded-full" />
           </div>
