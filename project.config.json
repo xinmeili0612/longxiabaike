@@ -16,8 +16,8 @@
     "packNpmManually": false
   },
   "compileType": "miniprogram",
-  "libVersion": "3.6.1",
-  "appid": "touristappid",
+  "libVersion": "3.3.0",
+  "appid": "wx5e230239ae6a7dbb",
   "projectname": "LONGXIABAIKE",
   "simulatorType": "wechat",
   "condition": {}
