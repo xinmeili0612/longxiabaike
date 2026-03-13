@@ -1,8 +1,7 @@
 <view class="tab-shell">
   <view class="tabbar surface">
     <view class="tab-item {{selected === 0 ? 'tab-item--active' : ''}}" data-index="0" data-path="/pages/tutorials/index" bindtap="switchTab">
-      <view class="tab-icon tab-icon--book {{selected === 0 ? 'tab-icon--active' : ''}}"></view>
-      <view class="tab-text">虾百科</view>
+      <view class="tab-text tab-text--side">虾百科</view>
     </view>
 
     <view class="tab-center-wrap">
@@ -14,8 +13,7 @@
     </view>
 
     <view class="tab-item {{selected === 2 ? 'tab-item--active' : ''}}" data-index="2" data-path="/pages/diary/index" bindtap="switchTab">
-      <view class="tab-icon tab-icon--note {{selected === 2 ? 'tab-icon--active' : ''}}"></view>
-      <view class="tab-text">虾日记</view>
+      <view class="tab-text tab-text--side">虾日记</view>
     </view>
   </view>
 </view>
