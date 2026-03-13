@@ -1,22 +1,23 @@
 <view class="container page-with-tabbar chat-page">
-  <view class="hero chat-hero">
-    <view class="hero-kicker">AI ASSISTANT</view>
-    <view class="section-title">虾聊天</view>
-    <view class="section-subtitle">像数字管家一样回答你，轻一点、顺一点、把聊天放到真正主入口里。</view>
+  <view class="chat-header">
+    <view class="chat-title">虾聊天</view>
+    <view class="chat-subtitle">随时问我 OpenClaw、部署、技能和使用问题</view>
   </view>
 
-  <scroll-view scroll-x class="chip-row quick-scroll">
-    <view class="quick-pill surface" data-text="OpenClaw 是什么？" bindtap="quickAsk">OpenClaw 是什么？</view>
-    <view class="quick-pill surface" data-text="OpenClaw 适合谁？" bindtap="quickAsk">OpenClaw 适合谁？</view>
-    <view class="quick-pill surface" data-text="OpenClaw 怎么开始？" bindtap="quickAsk">OpenClaw 怎么开始？</view>
+  <scroll-view scroll-x class="chip-row quick-scroll" enable-flex="true">
+    <view wx:for="{{quickPrompts}}" wx:key="*this" class="quick-pill surface" data-text="{{item}}" bindtap="quickAsk">{{item}}</view>
   </scroll-view>
 
-  <view class="chat-list">
-    <view wx:for="{{messages}}" wx:key="index" class="bubble {{item.role === 'user' ? 'bubble--user' : 'bubble--model'}}">{{item.text}}</view>
+  <view class="chat-stream">
+    <view wx:for="{{messages}}" wx:key="index" class="message-row {{item.role === 'user' ? 'message-row--user' : 'message-row--model'}}">
+      <view class="bubble {{item.role === 'user' ? 'bubble--user' : 'bubble--model'}}">{{item.text}}</view>
+    </view>
   </view>
 
-  <view class="composer surface">
-    <input class="composer-input" placeholder="输入你的问题..." value="{{input}}" bindinput="onInput" confirm-type="send" bindconfirm="sendMessage" />
-    <button class="send-btn" bindtap="sendMessage">发送</button>
+  <view class="composer-wrap">
+    <view class="composer surface">
+      <input class="composer-input" placeholder="输入你的问题..." value="{{input}}" bindinput="onInput" confirm-type="send" bindconfirm="sendMessage" />
+      <button class="send-btn" bindtap="sendMessage">发送</button>
+    </view>
   </view>
 </view>

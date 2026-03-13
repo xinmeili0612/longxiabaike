@@ -1,10 +1,11 @@
 Page({
   data: {
     input: '',
+    quickPrompts: ['OpenClaw 是什么？', 'OpenClaw 适合谁？', 'OpenClaw 怎么开始？', '微信小程序怎么部署？'],
     messages: [
       {
         role: 'model',
-        text: '你好，我是虾聊天。你可以直接问 OpenClaw 是什么、适合谁、怎么开始，我会先用内置知识回答。'
+        text: '你好，我是虾聊天。你可以直接问我 OpenClaw 是什么、适合谁、怎么开始。'
       }
     ]
   },
@@ -52,6 +53,9 @@ Page({
     if (text.includes('怎么开始') || text.includes('入门')) {
       return '建议先去“入门”栏目，按准备服务器、配置模型、配置飞书机器人的顺序看。先跑通第一只小龙虾，再谈更高级玩法。';
     }
-    return '这一版我先把小程序 UI 和原生结构做好。下一步如果你要真接 AI，我可以继续把聊天接成后端 API 版本。';
+    if (text.includes('小程序') || text.includes('微信')) {
+      return '如果你是在做微信小程序，先把小程序结构跑通，再去调整内容页、底部导航和聊天页体验。先跑通，再做精致，是最稳的顺序。';
+    }
+    return '你可以继续直接问我更具体的问题，比如：OpenClaw 是什么、适合谁、怎么开始，或者小程序应该怎么改。';
   }
 });
