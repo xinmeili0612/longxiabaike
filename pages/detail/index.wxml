@@ -1,0 +1,21 @@
+<view class="container detail-page">
+  <view class="article card">
+    <view class="article-title">{{title}}</view>
+    <view class="article-desc" wx:if="{{description}}">{{description}}</view>
+
+    <block wx:for="{{blocks}}" wx:key="index">
+      <view wx:if="{{item.type === 'h1'}}" class="md-h1">{{item.text}}</view>
+      <view wx:elif="{{item.type === 'h2'}}" class="md-h2">{{item.text}}</view>
+      <view wx:elif="{{item.type === 'h3'}}" class="md-h3">{{item.text}}</view>
+      <view wx:elif="{{item.type === 'p'}}" class="md-p">{{item.text}}</view>
+      <view wx:elif="{{item.type === 'ul'}}" class="md-list">
+        <view wx:for="{{item.items}}" wx:key="index" class="md-li">• {{item}}</view>
+      </view>
+      <view wx:elif="{{item.type === 'ol'}}" class="md-list">
+        <view wx:for="{{item.items}}" wx:key="index" class="md-li">{{index + 1}}. {{item}}</view>
+      </view>
+    </block>
+  </view>
+
+  <button class="chat-btn" bindtap="goChat">去虾聊天问 AI</button>
+</view>

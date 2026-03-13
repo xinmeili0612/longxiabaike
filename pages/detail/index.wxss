@@ -1,0 +1,84 @@
+@import "../../app.wxss";
+
+.detail-page {
+  padding-top: 20rpx;
+}
+
+.article {
+  padding: 34rpx 28rpx;
+}
+
+.article-title {
+  font-size: 44rpx;
+  line-height: 1.38;
+  font-weight: 800;
+  color: #111827;
+  text-align: left;
+}
+
+.article-desc {
+  margin-top: 16rpx;
+  font-size: 25rpx;
+  line-height: 1.7;
+  color: #9a6b32;
+}
+
+.md-h1 {
+  margin-top: 16rpx;
+  margin-bottom: 24rpx;
+  font-size: 44rpx;
+  line-height: 1.38;
+  font-weight: 800;
+  color: #111827;
+}
+
+.md-h2 {
+  margin-top: 40rpx;
+  margin-bottom: 16rpx;
+  font-size: 38rpx;
+  line-height: 1.35;
+  font-weight: 800;
+  color: #111827;
+}
+
+.md-h3 {
+  margin-top: 32rpx;
+  margin-bottom: 14rpx;
+  font-size: 32rpx;
+  line-height: 1.5;
+  font-weight: 700;
+  color: #111827;
+}
+
+.md-p {
+  margin-bottom: 24rpx;
+  font-size: 30rpx;
+  line-height: 1.9;
+  color: #4b5563;
+}
+
+.md-list {
+  margin-bottom: 24rpx;
+}
+
+.md-li {
+  margin-bottom: 14rpx;
+  font-size: 30rpx;
+  line-height: 1.85;
+  color: #4b5563;
+}
+
+.chat-btn {
+  margin-top: 28rpx;
+  background: linear-gradient(135deg, #f59e0b, #e07a00);
+  color: #ffffff;
+  border-radius: 22rpx;
+  font-size: 30rpx;
+  font-weight: 800;
+  height: 96rpx;
+  line-height: 96rpx;
+}
+
+.chat-btn::after {
+  border: none;
+}

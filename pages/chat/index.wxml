@@ -1,0 +1,21 @@
+<view class="container chat-page">
+  <view class="hero card">
+    <view class="section-title">虾聊天</view>
+    <view class="section-subtitle">微信小程序适配版已接好基础聊天结构，先保证能打开、能展示、能继续扩。</view>
+  </view>
+
+  <view class="quick-row">
+    <view class="quick card" data-text="OpenClaw 是什么？" bindtap="quickAsk">OpenClaw 是什么？</view>
+    <view class="quick card" data-text="OpenClaw 适合谁？" bindtap="quickAsk">OpenClaw 适合谁？</view>
+    <view class="quick card" data-text="OpenClaw 怎么开始？" bindtap="quickAsk">OpenClaw 怎么开始？</view>
+  </view>
+
+  <view class="chat-list">
+    <view wx:for="{{messages}}" wx:key="index" class="bubble {{item.role === 'user' ? 'bubble--user' : 'bubble--model'}}">{{item.text}}</view>
+  </view>
+
+  <view class="composer card">
+    <input class="composer-input" placeholder="输入你的问题..." value="{{input}}" bindinput="onInput" confirm-type="send" bindconfirm="sendMessage" />
+    <button class="send-btn" bindtap="sendMessage">发送</button>
+  </view>
+</view>

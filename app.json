@@ -1,0 +1,37 @@
+{
+  "pages": [
+    "pages/tutorials/index",
+    "pages/chat/index",
+    "pages/diary/index",
+    "pages/detail/index"
+  ],
+  "window": {
+    "navigationBarTitleText": "龙虾百科",
+    "navigationBarBackgroundColor": "#FFFDF5",
+    "navigationBarTextStyle": "black",
+    "backgroundColor": "#FDFDFD",
+    "backgroundTextStyle": "light"
+  },
+  "tabBar": {
+    "color": "#6B7280",
+    "selectedColor": "#E07A00",
+    "backgroundColor": "#FFFFFF",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/tutorials/index",
+        "text": "虾百科"
+      },
+      {
+        "pagePath": "pages/chat/index",
+        "text": "虾聊天"
+      },
+      {
+        "pagePath": "pages/diary/index",
+        "text": "虾日记"
+      }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

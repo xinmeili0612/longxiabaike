@@ -1,0 +1,24 @@
+{
+  "description": "龙虾百科微信小程序",
+  "packOptions": {
+    "ignore": []
+  },
+  "setting": {
+    "es6": true,
+    "enhance": true,
+    "postcss": true,
+    "minified": true,
+    "urlCheck": false,
+    "coverView": true,
+    "showShadowRootInWxmlPanel": true,
+    "compileHotReLoad": true,
+    "ignoreUploadUnusedFiles": true,
+    "packNpmManually": false
+  },
+  "compileType": "miniprogram",
+  "libVersion": "3.6.1",
+  "appid": "touristappid",
+  "projectname": "LONGXIABAIKE",
+  "simulatorType": "wechat",
+  "condition": {}
+}

@@ -1,0 +1,70 @@
+@import "../../app.wxss";
+
+.hero {
+  padding: 32rpx;
+  margin-bottom: 24rpx;
+}
+
+.chips {
+  margin-bottom: 24rpx;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 22rpx;
+}
+
+.item {
+  padding: 28rpx;
+}
+
+.meta-row {
+  display: flex;
+  align-items: center;
+  gap: 12rpx;
+  flex-wrap: wrap;
+  margin-bottom: 16rpx;
+}
+
+.badge {
+  display: inline-block;
+  padding: 8rpx 18rpx;
+  border-radius: 999rpx;
+  background: #fff7ed;
+  color: #e07a00;
+  font-size: 22rpx;
+  font-weight: 700;
+}
+
+.badge--dark {
+  background: #111827;
+  color: #ffffff;
+}
+
+.tag {
+  color: #b45309;
+  font-size: 22rpx;
+  font-weight: 700;
+}
+
+.item-title {
+  font-size: 34rpx;
+  line-height: 1.4;
+  font-weight: 800;
+  color: #111827;
+}
+
+.item-desc {
+  margin-top: 14rpx;
+  font-size: 26rpx;
+  line-height: 1.7;
+  color: #6b7280;
+}
+
+.item-link {
+  margin-top: 20rpx;
+  color: #e07a00;
+  font-size: 25rpx;
+  font-weight: 700;
+}
