@@ -7,7 +7,8 @@
 .chat-page {
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
+  height: calc(100vh - 208rpx);
+  min-height: 0;
 }
 
 .chat-header {
@@ -53,7 +54,10 @@
   flex-direction: column;
   gap: 18rpx;
   flex: 1;
-  min-height: 460rpx;
+  min-height: 0;
+  height: 0;
+  padding: 6rpx 0 8rpx;
+  box-sizing: border-box;
 }
 
 .message-row {
