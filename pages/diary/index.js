@@ -11,6 +11,12 @@ Page({
     this.applyFilters();
   },
 
+  onShow() {
+    if (typeof this.getTabBar === 'function' && this.getTabBar()) {
+      this.getTabBar().setData({ selected: 2 });
+    }
+  },
+
   switchCategory(e) {
     this.setData({ activeCategory: e.currentTarget.dataset.category }, () => this.applyFilters());
   },
@@ -22,7 +28,9 @@ Page({
 
   applyFilters() {
     const { activeCategory } = this.data;
-    const filteredDiaries = diaries.filter((item) => activeCategory === '全部' || item.category === activeCategory);
+    const filteredDiaries = diaries
+      .filter((item) => activeCategory === '全部' || item.category === activeCategory)
+      .map((item, index) => ({ ...item, featured: index === 0 }));
     this.setData({ filteredDiaries });
   }
 });

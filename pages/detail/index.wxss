@@ -2,6 +2,7 @@
 
 .detail-page {
   padding-top: 18rpx;
+  padding-bottom: 64rpx;
 }
 
 .article-head {

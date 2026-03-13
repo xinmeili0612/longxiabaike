@@ -4,9 +4,15 @@ Page({
     messages: [
       {
         role: 'model',
-        text: '你好，我是虾聊天。微信小程序版先给你可用入口：你可以问 OpenClaw 是什么、适合谁、怎么开始，我会先用内置知识回答。'
+        text: '你好，我是虾聊天。你可以直接问 OpenClaw 是什么、适合谁、怎么开始，我会先用内置知识回答。'
       }
     ]
+  },
+
+  onShow() {
+    if (typeof this.getTabBar === 'function' && this.getTabBar()) {
+      this.getTabBar().setData({ selected: 1 });
+    }
   },
 
   onInput(e) {
@@ -46,6 +52,6 @@ Page({
     if (text.includes('怎么开始') || text.includes('入门')) {
       return '建议先去“入门”栏目，按准备服务器、配置模型、配置飞书机器人的顺序看。先跑通第一只小龙虾，再谈更高级玩法。';
     }
-    return '微信小程序版聊天我先给你做了可用占位版，核心先保证能提交审核和展示内容。下一步如果你要真接 AI，我可以继续把小程序聊天接成后端 API 版本。';
+    return '这一版我先把小程序 UI 和原生结构做好。下一步如果你要真接 AI，我可以继续把聊天接成后端 API 版本。';
   }
 });

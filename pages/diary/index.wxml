@@ -1,4 +1,4 @@
-<view class="container">
+<view class="container page-with-tabbar">
   <view class="hero">
     <view class="hero-kicker">REAL NOTES</view>
     <view class="section-title">虾日记</view>
@@ -10,14 +10,13 @@
   </scroll-view>
 
   <view class="list">
-    <view wx:for="{{filteredDiaries}}" wx:key="id" class="item soft-card" data-id="{{item.id}}" data-kind="diary" bindtap="openDetail">
+    <view wx:for="{{filteredDiaries}}" wx:key="id" class="item soft-card {{item.featured ? 'item--featured' : ''}}" data-id="{{item.id}}" data-kind="diary" bindtap="openDetail">
       <view class="meta-row">
         <view class="meta-pill meta-pill--dark">{{item.category}}</view>
         <view wx:for="{{item.tags}}" wx:key="*this" class="tag">#{{item}}</view>
       </view>
       <view class="item-title">{{item.title}}</view>
       <view class="item-desc">{{item.description}}</view>
-      <view class="item-link">继续阅读</view>
     </view>
   </view>
 </view>

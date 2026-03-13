@@ -1,8 +1,8 @@
-<view class="container chat-page">
+<view class="container page-with-tabbar chat-page">
   <view class="hero chat-hero">
     <view class="hero-kicker">AI ASSISTANT</view>
     <view class="section-title">虾聊天</view>
-    <view class="section-subtitle">像数字管家一样回答你，先给你一个更轻、更顺眼的小程序聊天界面。</view>
+    <view class="section-subtitle">像数字管家一样回答你，轻一点、顺一点、把聊天放到真正主入口里。</view>
   </view>
 
   <scroll-view scroll-x class="chip-row quick-scroll">

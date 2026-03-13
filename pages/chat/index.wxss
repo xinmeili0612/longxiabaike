@@ -1,5 +1,9 @@
 @import "../../app.wxss";
 
+.page-with-tabbar {
+  padding-bottom: 204rpx;
+}
+
 .chat-page {
   display: flex;
   flex-direction: column;

@@ -7,16 +7,17 @@
   ],
   "window": {
     "navigationBarTitleText": "龙虾百科",
-    "navigationBarBackgroundColor": "#FFFDF5",
+    "navigationBarBackgroundColor": "#F5F5F7",
     "navigationBarTextStyle": "black",
-    "backgroundColor": "#FDFDFD",
+    "backgroundColor": "#F5F5F7",
     "backgroundTextStyle": "light"
   },
   "tabBar": {
-    "color": "#6B7280",
-    "selectedColor": "#E07A00",
-    "backgroundColor": "#FFFFFF",
-    "borderStyle": "black",
+    "custom": true,
+    "color": "#8E8E93",
+    "selectedColor": "#F08A24",
+    "backgroundColor": "#00000000",
+    "borderStyle": "white",
     "list": [
       {
         "pagePath": "pages/tutorials/index",

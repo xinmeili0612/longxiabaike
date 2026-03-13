@@ -12,6 +12,12 @@ Page({
     this.applyFilters();
   },
 
+  onShow() {
+    if (typeof this.getTabBar === 'function' && this.getTabBar()) {
+      this.getTabBar().setData({ selected: 0 });
+    }
+  },
+
   onSearchInput(e) {
     this.setData({ searchQuery: e.detail.value || '' }, () => this.applyFilters());
   },
@@ -28,11 +34,11 @@ Page({
   applyFilters() {
     const { activeCategory, searchQuery } = this.data;
     const keyword = searchQuery.trim();
-    const filteredTutorials = tutorials.filter((item) => {
+    const filteredTutorials = tutorials.filter((item, index) => {
       const categoryMatch = activeCategory === '全部' || item.category === activeCategory;
       const keywordMatch = !keyword || item.title.includes(keyword) || item.description.includes(keyword);
       return categoryMatch && keywordMatch;
-    });
+    }).map((item, index) => ({ ...item, featured: index === 0 }));
     this.setData({ filteredTutorials });
   }
 });
