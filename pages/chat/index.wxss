@@ -1,13 +1,13 @@
 @import "../../app.wxss";
 
 .page-with-tabbar {
-  padding-bottom: 170rpx;
+  padding-bottom: 136rpx;
 }
 
 .chat-page {
   display: flex;
   flex-direction: column;
-  height: calc(100vh - 170rpx);
+  height: calc(100vh - 136rpx);
   min-height: 0;
 }
 
@@ -96,8 +96,8 @@
 .composer-wrap {
   position: sticky;
   bottom: 0;
-  margin-top: 10rpx;
-  padding-top: 8rpx;
+  margin-top: 6rpx;
+  padding-top: 4rpx;
   background: linear-gradient(180deg, rgba(245,245,247,0) 0%, rgba(245,245,247,0.88) 18%, rgba(245,245,247,1) 100%);
 }
 
