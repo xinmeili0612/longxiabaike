@@ -1,10 +1,11 @@
 <view class="container">
-  <view class="hero card">
+  <view class="hero">
+    <view class="hero-kicker">LOBSTER GUIDE</view>
     <view class="section-title">龙虾百科</view>
     <view class="section-subtitle">给完全小白看的 OpenClaw 内容库，先理解，再上手。</view>
   </view>
 
-  <view class="search card">
+  <view class="search-shell surface">
     <input class="search-input" placeholder="搜索百科内容..." value="{{searchQuery}}" bindinput="onSearchInput" />
   </view>
 
@@ -13,13 +14,13 @@
   </scroll-view>
 
   <view class="list">
-    <view wx:for="{{filteredTutorials}}" wx:key="id" class="item card" data-id="{{item.id}}" data-kind="tutorial" bindtap="openDetail">
-      <view class="meta-row">
-        <view class="badge">{{item.category}}</view>
+    <view wx:for="{{filteredTutorials}}" wx:key="id" class="item soft-card" data-id="{{item.id}}" data-kind="tutorial" bindtap="openDetail">
+      <view class="item-top">
+        <view class="meta-pill">{{item.category}}</view>
       </view>
       <view class="item-title">{{item.title}}</view>
       <view class="item-desc">{{item.description}}</view>
-      <view class="item-link">阅读全文 →</view>
+      <view class="item-link">继续阅读</view>
     </view>
   </view>
 </view>

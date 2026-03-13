@@ -6,75 +6,82 @@
   gap: 22rpx;
 }
 
-.hero {
-  padding: 32rpx;
+.chat-hero {
+  padding-bottom: 4rpx;
 }
 
-.quick-row {
-  display: flex;
-  flex-direction: column;
-  gap: 16rpx;
+.quick-scroll {
+  margin-top: 2rpx;
 }
 
-.quick {
-  padding: 24rpx 26rpx;
-  font-size: 28rpx;
-  line-height: 1.5;
-  font-weight: 700;
-  color: #111827;
+.quick-pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 14rpx;
+  padding: 0 24rpx;
+  height: 72rpx;
+  border-radius: 999rpx;
+  font-size: 24rpx;
+  color: #444;
+  font-weight: 600;
 }
 
 .chat-list {
   display: flex;
   flex-direction: column;
   gap: 18rpx;
+  padding-top: 6rpx;
 }
 
 .bubble {
   max-width: 88%;
   padding: 24rpx 26rpx;
-  border-radius: 24rpx;
-  font-size: 28rpx;
-  line-height: 1.7;
+  border-radius: 28rpx;
+  font-size: 27rpx;
+  line-height: 1.72;
+  box-shadow: 0 10rpx 24rpx rgba(15, 23, 42, 0.05);
 }
 
 .bubble--model {
   align-self: flex-start;
-  background: #ffffff;
-  border: 2rpx solid #f3f4f6;
-  color: #111827;
+  background: rgba(255,255,255,0.88);
+  color: #1f2937;
 }
 
 .bubble--user {
   align-self: flex-end;
-  background: #e07a00;
+  background: linear-gradient(135deg, #ffb649 0%, #f08a24 100%);
   color: #ffffff;
 }
 
 .composer {
-  margin-top: 8rpx;
+  margin-top: 6rpx;
   padding: 12rpx;
   display: flex;
   align-items: center;
-  gap: 16rpx;
+  gap: 14rpx;
+  border-radius: 24rpx;
 }
 
 .composer-input {
   flex: 1;
   height: 76rpx;
-  padding: 0 20rpx;
+  padding: 0 18rpx;
+  border-radius: 18rpx;
+  background: rgba(242, 242, 247, 0.92);
   font-size: 28rpx;
 }
 
 .send-btn {
   margin: 0;
-  width: 140rpx;
+  width: 136rpx;
   height: 76rpx;
   line-height: 76rpx;
   border-radius: 18rpx;
-  background: #e07a00;
+  background: linear-gradient(135deg, #ffb649 0%, #f08a24 100%);
   color: #ffffff;
-  font-size: 28rpx;
+  font-size: 27rpx;
   font-weight: 700;
 }
 

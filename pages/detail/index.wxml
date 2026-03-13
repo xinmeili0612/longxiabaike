@@ -1,8 +1,11 @@
 <view class="container detail-page">
-  <view class="article card">
+  <view class="article-head">
+    <view class="hero-kicker">ARTICLE</view>
     <view class="article-title">{{title}}</view>
     <view class="article-desc" wx:if="{{description}}">{{description}}</view>
+  </view>
 
+  <view class="article surface">
     <block wx:for="{{blocks}}" wx:key="index">
       <view wx:if="{{item.type === 'h1'}}" class="md-h1">{{item.text}}</view>
       <view wx:elif="{{item.type === 'h2'}}" class="md-h2">{{item.text}}</view>
@@ -17,5 +20,8 @@
     </block>
   </view>
 
-  <button class="chat-btn" bindtap="goChat">去虾聊天问 AI</button>
+  <view class="article-cta">
+    <view class="cta-text">看完还有疑问，就直接去虾聊天继续问。</view>
+    <button class="primary-btn" bindtap="goChat">去虾聊天问 AI</button>
+  </view>
 </view>

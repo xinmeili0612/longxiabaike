@@ -1,20 +1,5 @@
 @import "../../app.wxss";
 
-.hero {
-  padding: 32rpx;
-  margin-bottom: 24rpx;
-}
-
-.search {
-  padding: 8rpx 24rpx;
-  margin-bottom: 22rpx;
-}
-
-.search-input {
-  height: 76rpx;
-  font-size: 28rpx;
-}
-
 .chips {
   margin-bottom: 24rpx;
 }
@@ -26,40 +11,31 @@
 }
 
 .item {
-  padding: 28rpx;
+  padding: 28rpx 26rpx 30rpx;
 }
 
-.meta-row {
-  margin-bottom: 16rpx;
-}
-
-.badge {
-  display: inline-block;
-  padding: 8rpx 18rpx;
-  border-radius: 999rpx;
-  background: #fff7ed;
-  color: #e07a00;
-  font-size: 22rpx;
-  font-weight: 700;
+.item-top {
+  margin-bottom: 18rpx;
 }
 
 .item-title {
   font-size: 34rpx;
-  line-height: 1.4;
-  font-weight: 800;
+  line-height: 1.34;
+  font-weight: 760;
   color: #111827;
+  letter-spacing: -0.03em;
 }
 
 .item-desc {
   margin-top: 14rpx;
-  font-size: 26rpx;
-  line-height: 1.7;
-  color: #6b7280;
+  font-size: 25rpx;
+  line-height: 1.72;
+  color: #6e6e73;
 }
 
 .item-link {
-  margin-top: 20rpx;
-  color: #e07a00;
-  font-size: 25rpx;
+  margin-top: 22rpx;
+  color: #c46a12;
+  font-size: 24rpx;
   font-weight: 700;
 }

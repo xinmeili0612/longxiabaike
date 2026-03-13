@@ -1,59 +1,60 @@
 @import "../../app.wxss";
 
 .detail-page {
-  padding-top: 20rpx;
+  padding-top: 18rpx;
+}
+
+.article-head {
+  padding: 6rpx 6rpx 24rpx;
+}
+
+.article-title {
+  margin-top: 8rpx;
+  font-size: 46rpx;
+  line-height: 1.32;
+  font-weight: 800;
+  color: #111827;
+  letter-spacing: -0.035em;
+}
+
+.article-desc {
+  margin-top: 16rpx;
+  font-size: 25rpx;
+  line-height: 1.72;
+  color: #8f6b45;
 }
 
 .article {
   padding: 34rpx 28rpx;
 }
 
-.article-title {
-  font-size: 44rpx;
-  line-height: 1.38;
-  font-weight: 800;
-  color: #111827;
-  text-align: left;
-}
-
-.article-desc {
-  margin-top: 16rpx;
-  font-size: 25rpx;
-  line-height: 1.7;
-  color: #9a6b32;
-}
-
 .md-h1 {
-  margin-top: 16rpx;
-  margin-bottom: 24rpx;
-  font-size: 44rpx;
-  line-height: 1.38;
-  font-weight: 800;
-  color: #111827;
+  display: none;
 }
 
 .md-h2 {
-  margin-top: 40rpx;
+  margin-top: 42rpx;
   margin-bottom: 16rpx;
   font-size: 38rpx;
   line-height: 1.35;
   font-weight: 800;
   color: #111827;
+  letter-spacing: -0.03em;
 }
 
 .md-h3 {
   margin-top: 32rpx;
   margin-bottom: 14rpx;
-  font-size: 32rpx;
-  line-height: 1.5;
+  font-size: 31rpx;
+  line-height: 1.46;
   font-weight: 700;
-  color: #111827;
+  color: #1f2937;
 }
 
 .md-p {
   margin-bottom: 24rpx;
-  font-size: 30rpx;
-  line-height: 1.9;
+  font-size: 29rpx;
+  line-height: 1.92;
   color: #4b5563;
 }
 
@@ -63,22 +64,18 @@
 
 .md-li {
   margin-bottom: 14rpx;
-  font-size: 30rpx;
-  line-height: 1.85;
+  font-size: 29rpx;
+  line-height: 1.88;
   color: #4b5563;
 }
 
-.chat-btn {
+.article-cta {
   margin-top: 28rpx;
-  background: linear-gradient(135deg, #f59e0b, #e07a00);
-  color: #ffffff;
-  border-radius: 22rpx;
-  font-size: 30rpx;
-  font-weight: 800;
-  height: 96rpx;
-  line-height: 96rpx;
 }
 
-.chat-btn::after {
-  border: none;
+.cta-text {
+  margin-bottom: 16rpx;
+  padding-left: 6rpx;
+  font-size: 24rpx;
+  color: #8b8b91;
 }

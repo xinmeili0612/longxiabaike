@@ -1,10 +1,5 @@
 @import "../../app.wxss";
 
-.hero {
-  padding: 32rpx;
-  margin-bottom: 24rpx;
-}
-
 .chips {
   margin-bottom: 24rpx;
 }
@@ -16,7 +11,7 @@
 }
 
 .item {
-  padding: 28rpx;
+  padding: 28rpx 26rpx 30rpx;
 }
 
 .meta-row {
@@ -24,47 +19,38 @@
   align-items: center;
   gap: 12rpx;
   flex-wrap: wrap;
-  margin-bottom: 16rpx;
+  margin-bottom: 18rpx;
 }
 
-.badge {
-  display: inline-block;
-  padding: 8rpx 18rpx;
-  border-radius: 999rpx;
-  background: #fff7ed;
-  color: #e07a00;
-  font-size: 22rpx;
-  font-weight: 700;
-}
-
-.badge--dark {
-  background: #111827;
+.meta-pill--dark {
+  background: rgba(29, 29, 31, 0.88);
   color: #ffffff;
 }
 
 .tag {
-  color: #b45309;
+  color: #a86a1d;
   font-size: 22rpx;
   font-weight: 700;
 }
 
 .item-title {
   font-size: 34rpx;
-  line-height: 1.4;
-  font-weight: 800;
+  line-height: 1.34;
+  font-weight: 760;
   color: #111827;
+  letter-spacing: -0.03em;
 }
 
 .item-desc {
   margin-top: 14rpx;
-  font-size: 26rpx;
-  line-height: 1.7;
-  color: #6b7280;
+  font-size: 25rpx;
+  line-height: 1.72;
+  color: #6e6e73;
 }
 
 .item-link {
-  margin-top: 20rpx;
-  color: #e07a00;
-  font-size: 25rpx;
+  margin-top: 22rpx;
+  color: #c46a12;
+  font-size: 24rpx;
   font-weight: 700;
 }
