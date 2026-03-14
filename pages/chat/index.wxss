@@ -130,18 +130,18 @@
 }
 
 .composer {
-  padding: 10rpx;
+  padding: 12rpx;
   display: flex;
   align-items: center;
-  gap: 12rpx;
-  border-radius: 26rpx;
+  gap: 10rpx;
+  border-radius: 28rpx;
 }
 
 .composer-input {
   flex: 1;
-  height: 72rpx;
-  padding: 0 20rpx;
-  border-radius: 18rpx;
+  height: 80rpx;
+  padding: 0 24rpx;
+  border-radius: 20rpx;
   background: rgba(242, 242, 247, 0.96);
   font-size: 28rpx;
   color: #1f2937;
@@ -149,10 +149,10 @@
 
 .send-btn {
   margin: 0;
-  min-width: 120rpx;
-  width: 120rpx;
-  height: 72rpx;
-  line-height: 72rpx;
+  min-width: 100rpx;
+  width: 100rpx;
+  height: 80rpx;
+  line-height: 80rpx;
   border-radius: 20rpx;
   background: linear-gradient(135deg, #ffb649 0%, #f08a24 100%);
   color: #ffffff;
@@ -160,6 +160,9 @@
   font-weight: 700;
   box-shadow: 0 8rpx 20rpx rgba(240, 138, 36, 0.2);
   text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .send-btn::after {
