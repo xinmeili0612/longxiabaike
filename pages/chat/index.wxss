@@ -13,7 +13,7 @@
 
 .chat-header {
   padding: 6rpx 6rpx 10rpx;
-  background: linear-gradient(180deg, rgba(255,251,245,0.92) 0%, rgba(255,247,235,0.6) 100%);
+  background: linear-gradient(180deg, rgba(255,248,240,0.96) 0%, rgba(255,244,230,0.88) 100%);
   margin: -28rpx -24rpx 14rpx;
   padding: 28rpx 24rpx 20rpx;
   border-radius: 28rpx 28rpx 0 0;
