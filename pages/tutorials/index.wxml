@@ -2,7 +2,7 @@
   <view class="hero hero--centered hero--lobster">
     <view class="hero-kicker hero-kicker--lobster">LOBSTER GUIDE</view>
     <view class="section-title section-title--lobster">龙虾百科</view>
-    <view class="section-subtitle section-subtitle--centered">给完全小白看的 OpenClaw 内容库，先理解，再上手。</view>
+    <view class="section-subtitle section-subtitle--centered">一看就懂的养虾指南，小白也能轻松上手</view>
   </view>
 
   <view class="search-shell surface">
