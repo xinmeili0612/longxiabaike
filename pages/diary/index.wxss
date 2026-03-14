@@ -4,6 +4,26 @@
   padding-bottom: 188rpx;
 }
 
+.hero--centered {
+  text-align: center;
+  align-items: center;
+}
+
+.hero-kicker--lobster {
+  background: rgba(255, 255, 255, 0.82);
+  color: #d45a4f;
+}
+
+.section-title--lobster {
+  color: #d4584e;
+}
+
+.section-subtitle--centered {
+  max-width: 560rpx;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .chips {
   margin-bottom: 24rpx;
 }
@@ -32,8 +52,8 @@
 }
 
 .meta-pill--dark {
-  background: rgba(29, 29, 31, 0.88);
-  color: #ffffff;
+  background: rgba(240, 138, 36, 0.16);
+  color: #c46a12;
 }
 
 .tag {
