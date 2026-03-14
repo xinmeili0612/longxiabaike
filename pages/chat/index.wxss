@@ -96,6 +96,16 @@
   border-top-left-radius: 12rpx;
 }
 
+.bubble--streaming {
+  opacity: 0.7;
+}
+
+.typing-indicator {
+  padding: 16rpx 24rpx;
+  font-size: 24rpx;
+  color: #9ca3af;
+}
+
 .bubble--user {
   background: linear-gradient(135deg, #ffb649 0%, #f08a24 100%);
   color: #ffffff;

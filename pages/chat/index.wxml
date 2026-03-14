@@ -7,7 +7,10 @@
 
   <scroll-view scroll-y class="chat-stream">
     <view wx:for="{{messages}}" wx:key="index" class="message-row {{item.role === 'user' ? 'message-row--user' : 'message-row--model'}}">
-      <view class="bubble {{item.role === 'user' ? 'bubble--user' : 'bubble--model'}}">{{item.text}}</view>
+      <view class="bubble {{item.role === 'user' ? 'bubble--user' : 'bubble--model'}} {{item.streaming ? 'bubble--streaming' : ''}}">{{item.text}}</view>
+    </view>
+    <view wx:if="{{isTyping}}" class="typing-indicator">
+      <text>正在思考...</text>
     </view>
   </scroll-view>
 
