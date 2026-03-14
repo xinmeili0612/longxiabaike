@@ -22,7 +22,7 @@
   justify-content: space-between;
   position: relative;
   border-radius: 34rpx;
-  background: linear-gradient(180deg, rgba(255,248,240,0.96) 0%, rgba(255,244,230,0.92) 100%);
+  background: linear-gradient(180deg, rgba(255,240,220,0.98) 0%, rgba(255,235,210,0.95) 100%);
   box-shadow: 0 -8rpx 32rpx rgba(0, 0, 0, 0.06);
 }
 
