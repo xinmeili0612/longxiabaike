@@ -104,7 +104,7 @@ export default function App() {
           <span className="text-[#E07A00]">{titles[activeTab].slice(2)}</span>
         </h1>
         <p className="text-[10px] sm:text-[12px] text-[#6B7280] mt-1 font-bold uppercase tracking-[0.16em] opacity-80">
-          {activeTab === 'tutorials' && '不用命令行 也能玩转小龙虾'}
+          {activeTab === 'tutorials' && '一看就懂的养虾指南，小白也能轻松上手'}
           {activeTab === 'chat' && '你的本地龙虾管家'}
           {activeTab === 'diary' && '小白也能轻松玩转'}
         </p>
