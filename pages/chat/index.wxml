@@ -5,10 +5,6 @@
     <view class="section-subtitle section-subtitle--centered">随时问我 OpenClaw、部署、技能和使用问题</view>
   </view>
 
-  <scroll-view scroll-x class="chip-row quick-scroll" enable-flex="true">
-    <view wx:for="{{quickPrompts}}" wx:key="*this" class="quick-pill surface" data-text="{{item}}" bindtap="quickAsk">{{item}}</view>
-  </scroll-view>
-
   <scroll-view scroll-y class="chat-stream">
     <view wx:for="{{messages}}" wx:key="index" class="message-row {{item.role === 'user' ? 'message-row--user' : 'message-row--model'}}">
       <view class="bubble {{item.role === 'user' ? 'bubble--user' : 'bubble--model'}}">{{item.text}}</view>
