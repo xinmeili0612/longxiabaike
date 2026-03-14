@@ -30,6 +30,10 @@ Page({
     this.setData({ input: '', messages, isTyping: true });
 
     try {
+      // 先添加一条空的模型消息
+      const modelMsg = { role: 'model', text: '', streaming: true };
+      this.setData({ messages: this.data.messages.concat(modelMsg) });
+
       // 调用云开发 AI 能力
       const res = await wx.cloud.extend.AI.createModel('deepseek').streamText({
         data: {
@@ -54,24 +58,18 @@ Page({
         
         if (content) {
           assistantText += content;
-          // 实时更新消息
-          this.setData({
-            messages: this.data.messages.concat([
-              { role: 'model', text: assistantText, streaming: true }
-            ])
-          });
+          // 实时更新最后一条消息
+          const currentMessages = this.data.messages;
+          currentMessages[currentMessages.length - 1].text = assistantText;
+          this.setData({ messages: currentMessages });
         }
       }
 
-      // 流式结束，更新最后一条消息
+      // 流式结束，关闭 streaming 状态
       if (assistantText) {
-        const finalMessages = this.data.messages.map((msg, idx) => {
-          if (idx === this.data.messages.length - 1 && msg.role === 'model') {
-            return { ...msg, streaming: false };
-          }
-          return msg;
-        });
-        this.setData({ messages: finalMessages, isTyping: false });
+        const currentMessages = this.data.messages;
+        currentMessages[currentMessages.length - 1].streaming = false;
+        this.setData({ messages: currentMessages, isTyping: false });
       }
     } catch (err) {
       console.error('AI 调用失败：', err);
