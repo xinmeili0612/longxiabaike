@@ -1,7 +1,8 @@
 <view class="container page-with-tabbar chat-page">
-  <view class="chat-header hero--centered">
-    <view class="chat-title section-title--lobster">虾聊天</view>
-    <view class="chat-subtitle section-subtitle--centered">随时问我 OpenClaw、部署、技能和使用问题</view>
+  <view class="hero hero--centered">
+    <view class="hero-kicker hero-kicker--lobster">AI ASSISTANT</view>
+    <view class="section-title section-title--lobster">虾聊天</view>
+    <view class="section-subtitle section-subtitle--centered">随时问我 OpenClaw、部署、技能和使用问题</view>
   </view>
 
   <scroll-view scroll-x class="chip-row quick-scroll" enable-flex="true">
