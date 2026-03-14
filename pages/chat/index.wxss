@@ -13,6 +13,25 @@
 
 .chat-header {
   padding: 6rpx 6rpx 10rpx;
+  background: linear-gradient(180deg, rgba(255,251,245,0.92) 0%, rgba(255,247,235,0.6) 100%);
+  margin: -28rpx -24rpx 14rpx;
+  padding: 28rpx 24rpx 20rpx;
+  border-radius: 28rpx 28rpx 0 0;
+}
+
+.hero--centered {
+  text-align: center;
+  align-items: center;
+}
+
+.section-title--lobster {
+  color: #d4584e;
+}
+
+.section-subtitle--centered {
+  max-width: 560rpx;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .chat-title {
